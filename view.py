@@ -29,6 +29,7 @@ class View(tk.Frame):
 
     def initizalize_game(self):
         self.controller.game_running = True
+        self.controller.player_turn = 1
         self.used_tiles = {(0,0):2, (0,1):2, (0,2):2,
                            (1,0):2, (1,1):2, (1,2):2,
                            (2,0):2, (2,1):2, (2,2):2}

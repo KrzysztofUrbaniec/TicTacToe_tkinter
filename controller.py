@@ -86,7 +86,7 @@ class Controller(tk.Tk):
             messagebox.showinfo(message=f"Player: {self.player_symbols[self.player_turn]} won!")
             self.game_running = False
         # Diagonals
-        if (self.frame.used_tiles[(0,0)] == self.player_turn and
+        elif (self.frame.used_tiles[(0,0)] == self.player_turn and
             self.frame.used_tiles[(1,1)] == self.player_turn and
             self.frame.used_tiles[(2,2)] == self.player_turn):
             self.winner = self.player_symbols[self.player_turn]
