@@ -48,7 +48,7 @@ class View(tk.Frame):
         self.menu = tk.Menu(self.controller)
         self.controller.config(menu=self.menu)
         self.create_file_menu()
-        #self.create_about_menu()
+        self.create_about_menu()
 
     def create_file_menu(self):
         self.file_menu = tk.Menu(self.menu, tearoff=False)
@@ -62,8 +62,8 @@ class View(tk.Frame):
 
     def create_about_menu(self):
         self.about_menu = tk.Menu(self.menu, tearoff=False)
-        self.menu.add_cascade(label="About", menu=self.file_menu)
-        self.about_menu.add_command(label="Info", command=tk.messagebox.showinfo(message="Simple Tic Tac Toe game, Krzysztof Urbaniec"))
+        self.menu.add_cascade(label="About", menu=self.about_menu)
+        self.about_menu.add_command(label="Info", command=lambda:tk.messagebox.showinfo(message="Simple Tic Tac Toe game, Krzysztof Urbaniec"))
 
     def draw_board(self):
         for row in range(NUMBER_OF_ROWS):
